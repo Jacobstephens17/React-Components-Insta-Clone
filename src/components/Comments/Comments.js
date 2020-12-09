@@ -1,5 +1,5 @@
 import React from 'react';
-import Comment from './Comment';
+import Comment from './components/Comments/Comment';
 import './Comments.css';
 
 const Comments = props => {
@@ -8,6 +8,9 @@ const Comments = props => {
 
   return (
     <div>
+      {comments.map((item) => {
+        return <Comment comment={comments} key={item.text}/>
+      })}
       {/* map through the comments prop and render a Comment for every piece of data */}
     </div>
   );
